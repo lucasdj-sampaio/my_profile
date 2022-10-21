@@ -1,14 +1,19 @@
 import styled from 'styled-components'
+import userImg from './img/userIcon.jpg'
 
 export function CreateMenuBar() {
   return (
     <MenuBar>
       <div>
-        <UserImg></UserImg>
+        <ImageProps src={userImg}></ImageProps>
       </div>
       
       <div>
-        <CreateOptions></CreateOptions>
+        <ul>
+          <li>Work</li>
+          <li>Services</li>
+          <li>About</li>
+        </ul>
       </div>
     </MenuBar>
   )
@@ -20,24 +25,23 @@ const MenuBar = styled.div`
   display: flex;
   justify-content: space-around;
 
+  .img{
+    
+  }
+
   .ul{
-    display: content;
+    
   }
 `;
 
-const UserImg = styled.img`
-  content: url("./img/userIcon.JPG");
-  border-radius: 90px;
+const ImageProps = styled.img`
+  border-radius: 50%;
   width: 130px;
   height: 130px;
 `;
 
 function CreateOptions(){
   return(
-    <ul>
-      <li>Work</li>
-      <li>Services</li>
-      <li>About</li>
-    </ul>
+    
   )
 }
